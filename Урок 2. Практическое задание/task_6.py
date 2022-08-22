@@ -25,3 +25,39 @@
 “ед”: [“шт.”]
 }
 """
+my_list = []
+while True:
+    my_list.append((input("Номер товара: "),
+                   {"Название": input("Название: "),
+                    "Цена": input("Цена: "),
+                    "Количество": input("Количество: "),
+                    "ед.": input("Единицы учёта: ")}))
+    q = input("Закончить ввод позиций? Да, Нет: ")
+    if q == "Да":
+        break
+
+names_list = []
+prices_list = []
+counts_list = []
+units_list = []
+res_dict = {}
+
+my_list = [(1, {"название": " ", "цена": 1, "количество": 1,
+               "eд": "шт."}),
+          (2, {"название": " ", "цена": 1, "количество": 1,
+               "eд": "шт."}),
+          (3, {"название": " ", "цена": 1, "количество": 1,
+               "eд": "шт."})]
+
+for i in range(len(my_list)):
+    enumerate(my_list)
+    names_list.append(my_list[i][1]['название'])
+    prices_list.append(my_list[i][1]['цена'])
+    counts_list.append(my_list[i][1]['количество'])
+    units_list.append(my_list[i][1]['eд'])
+
+res_dict.update({'название': names_list, 'цена': prices_list,
+                 'количество': counts_list, 'единица измерения': units_list})
+print(res_dict)
+
+
