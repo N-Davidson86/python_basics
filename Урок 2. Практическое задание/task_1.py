@@ -15,3 +15,10 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+my_checklist = [8, 10, "world", 0.4, True, False, None, "some text"]
+for i in my_checklist:
+    print(type(i))
+
+
+

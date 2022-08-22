@@ -14,3 +14,20 @@
 1. раз
 2. перерефриж
 """
+
+my_checklist = input("Введите слова через пробел: ").split()
+
+# Вариант 1
+a = 1
+for el in my_checklist:
+    if len(el) > 10:
+        print(f"{a}. {el[:10]}")
+    else:
+        print(f"{a}. {el}")
+    a += 1
+
+print()
+
+# Вариант 2
+for i, el in enumerate(my_checklist, 1):
+    print(f'{i}. {el[:10]}')
